@@ -55,6 +55,8 @@ const ExternalPlugin = props => {
   const ANALYTICS_GOOGLE_ID = siteConfig('ANALYTICS_GOOGLE_ID')
   const MATOMO_HOST_URL = siteConfig('MATOMO_HOST_URL')
   const MATOMO_SITE_ID = siteConfig('MATOMO_SITE_ID')
+  const UMAMI_HOST_URL = siteConfig('UMAMI_HOST_URL')
+  const UMAMI_SITE_ID = siteConfig('UMAMI_SITE_ID')
   const ANALYTICS_51LA_ID = siteConfig('ANALYTICS_51LA_ID')
   const ANALYTICS_51LA_CK = siteConfig('ANALYTICS_51LA_CK')
   const DIFY_CHATBOT_ENABLED = siteConfig('DIFY_CHATBOT_ENABLED')
@@ -331,6 +333,10 @@ const ExternalPlugin = props => {
             `
           }}
         />
+      )}
+      {/* umami统计 */}
+      {UMAMI_HOST_URL && UMAMI_SITE_ID && (
+        <script defer src={`https://${UMAMI_HOST_URL}/script.js`} data-website-id={UMAMI_SITE_ID}></script>
       )}
     </>
   )

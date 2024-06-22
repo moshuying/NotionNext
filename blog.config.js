@@ -447,6 +447,9 @@ const BLOG = {
   // Matomo 网站统计
   MATOMO_HOST_URL: process.env.NEXT_PUBLIC_MATOMO_HOST_URL || '', // Matomo服务器地址，不带斜杠
   MATOMO_SITE_ID: process.env.NEXT_PUBLIC_MATOMO_SITE_ID || '', // Matomo网站ID
+  // umami 网站统计
+  UMAMI_HOST_URL: process.env.NEXT_PUBLIC_UMAMI_HOST_URL || '', // umami服务器地址，不带斜杠
+  UMAMI_WEBSITE_ID: process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || '', // umami网站ID
   // ACKEE网站访客统计工具
   ANALYTICS_ACKEE_TRACKER:
     process.env.NEXT_PUBLIC_ANALYTICS_ACKEE_TRACKER || '', // e.g 'https://ackee.tangly1024.com/tracker.js'
